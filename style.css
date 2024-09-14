@@ -40,7 +40,9 @@ body {
 /* Logo will fade in and out with delay */
 .logo {
   max-width: 300px;
-  animation: fadeInOutBlur 15s ease-out infinite;
+  margin: 0;
+  padding: 0;
+  animation: fadeInOutBlur 15s cubic-bezier(0.7, 0, 0.3, 1) infinite;
 }
 
 h1,
