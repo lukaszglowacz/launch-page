@@ -39,7 +39,30 @@ body {
   }
 }
 
-@keyframes fadeInOutSlide {
+@keyframes fadeDownSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeUpSlide {
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -71,14 +94,16 @@ body {
   animation: fadeInOutBlur 10s cubic-bezier(0.7, 0, 0.3, 1) infinite;
 }
 
-/* Tekst nagłówka */
-h1,
-h4 {
-  margin: 0;
-  opacity: 0;
-}
-
 /* Animacja logo, h1, h4 zsynchronizowana */
+
+h1 {
+  color: white;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 500;
+  animation: fadeUpSlide 10s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  animation-delay: 4s; /* Logo i h1 pojawiają się przed h4 */
+}
 
 h4 {
   color: white;
@@ -86,8 +111,7 @@ h4 {
   font-size: 17px;
   line-height: 1.6;
   font-weight: 400;
-  animation: fadeInOutSlide 10s cubic-bezier(0.7, 0, 0.3, 1) infinite;
-  animation-delay: 1s; /* Logo i h1 pojawiają się przed h4 */
+  animation: fadeDownSlide 10s cubic-bezier(0.7, 0, 0.3, 1) infinite;
 }
 
 .toggle-button {
