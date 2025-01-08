@@ -5,61 +5,14 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: url('images/gurudo_background.webp') no-repeat center center fixed; /* Dodaj obraz jako tło */
+  background: url("images/gurudo_background.webp") no-repeat center center fixed; /* Dodaj obraz jako tło */
   background-size: cover; /* Skalowanie obrazu, aby wypełnić ekran */
   font-family: "Montserrat", Arial, sans-serif;
 }
 
 .container {
   text-align: center;
-  padding: 20px;
-  border-radius: 10px; /* Zaokrąglenie krawędzi */
-}
-
-@keyframes fadeInOutBlur {
-  0% {
-    opacity: 0;
-    filter: blur(20px);
-  }
-  30% {
-    opacity: 1;
-    filter: blur(0);
-  }
-  70% {
-    opacity: 1;
-    filter: blur(0);
-  }
-  85% {
-    opacity: 0;
-    filter: blur(20px);
-  }
-  100% {
-    opacity: 0;
-    filter: blur(20px);
-  }
-}
-
-@keyframes fadeInOutSlide {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  30% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  70% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  85% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+  position: relative;
 }
 
 /* Logo will fade in and out with delay */
@@ -71,23 +24,73 @@ body {
   animation: fadeInOutBlur 10s cubic-bezier(0.7, 0, 0.3, 1) infinite;
 }
 
-/* Tekst nagłówka */
-h1,
-h4 {
-  margin: 0;
-  opacity: 0;
+.logo {
+  width: 300px;
+  height: auto;
+  animation: fadeInOutBlur 6s cubic-bezier(0.7, 0, 0.3, 1);
 }
-
-/* Animacja logo, h1, h4 zsynchronizowana */
 
 h4 {
   color: white;
-  padding: 0;
   font-size: 17px;
   line-height: 1.6;
-  font-weight: 400;
-  animation: fadeInOutSlide 10s cubic-bezier(0.7, 0, 0.3, 1) infinite;
-  animation-delay: 1s; /* Logo i h1 pojawiają się przed h4 */
+  animation: fadeInOutSlide 6s cubic-bezier(0.7, 0, 0.3, 1);
+  animation-delay: 1s;
+}
+
+h1.coming-soon {
+  color: white;
+  font-size: 24px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeInCenter 4s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+  animation-delay: 6s;
+}
+
+@keyframes fadeInOutBlur {
+  0%,
+  30% {
+    opacity: 0;
+    filter: blur(20px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
+
+@keyframes fadeInOutSlide {
+  0%,
+  30% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeInCenter {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .toggle-button {
@@ -99,7 +102,7 @@ h4 {
   padding: 0;
   font-size: 20px;
   cursor: pointer;
-  background-color: #373F41; /* Ciemnoszare tło */
+  background-color: #373f41; /* Ciemnoszare tło */
   color: #fff; /* Biała ikona */
   border: none;
   border-radius: 50%; /* Okrągły kształt */
