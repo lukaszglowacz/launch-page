@@ -42,9 +42,9 @@ body {
 @keyframes fadeDownSlide {
   0% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
-  30% {
+  10% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -54,20 +54,20 @@ body {
   }
   85% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
   100% {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-30px);
   }
 }
 
 @keyframes fadeUpSlide {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
-  30% {
+  10% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -77,11 +77,11 @@ body {
   }
   85% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
 }
 
@@ -101,7 +101,8 @@ h1 {
   padding: 0;
   font-size: 48px;
   font-weight: 500;
-  animation: fadeUpSlide 10s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  animation: fadeUpSlide 9s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  animation-delay: 1s;
   
 }
 
@@ -111,9 +112,10 @@ h4 {
   font-size: 24px;
   line-height: 1.6;
   font-weight: 400;
-  animation: fadeDownSlide 10s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+  animation: fadeDownSlide 9s cubic-bezier(0.7, 0, 0.3, 1) infinite;
   padding:0;
   margin: 1rem 0;
+  animation-delay: 1s;
 }
 
 .toggle-button {
