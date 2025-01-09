@@ -42,7 +42,7 @@ body {
 @keyframes fadeDownSlide {
   0% {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-80px);
   }
   10% {
     opacity: 1;
@@ -54,18 +54,18 @@ body {
   }
   85% {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-80px);
   }
   100% {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-80px);
   }
 }
 
 @keyframes fadeUpSlide {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(80px);
   }
   10% {
     opacity: 1;
@@ -77,11 +77,11 @@ body {
   }
   85% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(80px);
   }
   100% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(80px);
   }
 }
 
@@ -95,6 +95,10 @@ body {
 }
 
 /* Animacja logo, h1, h4 zsynchronizowana */
+
+h1, h4 {
+  opacity: 0;
+}
 
 h1 {
   color: white;
