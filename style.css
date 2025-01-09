@@ -183,4 +183,50 @@ h4 {
     font-size: 15px;
     margin: 0.5rem 0;
   }
+
+  @keyframes fadeDownSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    85% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+  
+  @keyframes fadeUpSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    85% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  }
 }
